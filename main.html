@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Check different selectors for DOM manipulations</title>
+    <link rel="stylesheet" href="style/app.css" type="text/css">
+    <script src="scripts/require.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="scripts/selectors.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+<div id="container" class="todosContainer">TODOs List items
+<ul id="todos" class="todosStyle">
+    <li id="li1" class="todoItem">
+        <span><input type="checkbox" class="checkbox"></span>
+        <span class="title"></span>
+    </li>
+    <li id="li2" class="todoItem">
+        <span><input type="checkbox" class="checkbox"></span>
+        <span class="title"></span>
+    </li>
+</ul>
+ <input type="text" id="userSelector" onclick="ns.handleSelector">
+</div>
+</body>
+</html>
