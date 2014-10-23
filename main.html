@@ -11,23 +11,27 @@
     <script src="scripts/app.js"></script>
 </head>
 <body>
-<div id="container" class="todosContainer">TODOs List
+<div id="container" class="todosContainer">Challenges
 <ul id="todosUL" class="todosStyle">
-    <li id="li1" class="todoItem">
+    <li id="li1" class="todoItem" data-result="$('span')">
         <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
-        <span class="title">Find all spans (12)</span>
+        <span class="title">Find all spans (10)</span>
+        <span class="title answer hidden">$('span') --> 10</span>
     </li>
-    <li id="li2" class="todoItem">
+    <li id="li2" class="todoItem" data-result="$('li span')">
         <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
-        <span class="title">Find all spans which are children of li (6\8)</span>
+        <span class="title">Find all spans which are children of li (8\10)</span>
+        <span class="title answer hidden">$('li span') --> 10</span>
     </li>
-    <li id="li3" class="todoItem">
+    <li id="li3" class="todoItem" data-result="$('li > span')">
         <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
-        <span class="title">Find all spans which are direct children of li (6\8)</span>
+        <span class="title">Find all spans which are direct children of li (4\10)</span>
+        <span class="title answer hidden">$('li > span') --> 10</span>
     </li>
-    <li id="li4" class="todoItem">
+    <li id="li4" class="todoItem" data-result="$('li:nth-child(1)')">
         <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
         <span class="title">Find the first li child</span>
+        <span class="title answer hidden">$('li:nth-child(1) --> first challenge</span>
     </li>
 </ul>
 

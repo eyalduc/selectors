@@ -2,3 +2,16 @@
     width: 74px;
     height: 20px;
 }
+li{
+    border:  1px solid mediumseagreen;
+    width: 70%;
+}
+.challengeCompleted{
+    background-color: aqua;
+}
+.hidden{
+    display: none;
+}
+.answer{
+    float: right;
+}
