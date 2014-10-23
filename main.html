@@ -11,18 +11,28 @@
     <script src="scripts/app.js"></script>
 </head>
 <body>
-<div id="container" class="todosContainer">TODOs List items
-<ul id="todos" class="todosStyle">
+<div id="container" class="todosContainer">TODOs List
+<ul id="todosUL" class="todosStyle">
     <li id="li1" class="todoItem">
-        <span><input type="checkbox" class="checkbox"></span>
-        <span class="title"></span>
+        <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
+        <span class="title">Find all spans (12)</span>
     </li>
     <li id="li2" class="todoItem">
-        <span><input type="checkbox" class="checkbox"></span>
-        <span class="title"></span>
+        <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
+        <span class="title">Find all spans which are children of li (6\8)</span>
+    </li>
+    <li id="li3" class="todoItem">
+        <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
+        <span class="title">Find all spans which are direct children of li (6\8)</span>
+    </li>
+    <li id="li4" class="todoItem">
+        <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
+        <span class="title">Find the first li child</span>
     </li>
 </ul>
- <input type="text" id="userSelector" onclick="ns.handleSelector">
+
+  <span><input type="text" id="userSelector" ></span>
+  <span><button id="execute" class="executeSelector" onclick="ns.handleSelector()" >Execute</button></span>
 </div>
 </body>
 </html>

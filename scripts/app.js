@@ -10,9 +10,23 @@ require(['selectors'],function(selectorsAPI){
 
 
 var handleSelector = function(text){
-alert(text);
-};
-ns.handleSelector = this.handleSelector;
+    var selector = $('#userSelector').val();
+
+    console.log(eval(selector)); //Dangerous and slow - eval is not to be used !!!
+
+    //using a function
+    //var func = new Function(selector);
+    //console.log(func());
+
+
+    //var theInstructions = "alert('Hello World'); var x = 100";
+    //
+    //var F=new Function (theInstructions);
+    //
+    //return(F());
+}
+
+ns.handleSelector = handleSelector;
 
 
 
