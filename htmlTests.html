@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <link href="style\htmlTest.css" rel="stylesheet" type="text/css">
+
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--<span style="position: relative;              width: 40px; height: 300px; background-color: yellow"></span>
+<span style="position: relative; left: -20px; width: 40px; height: 300px; background-color: blueviolet"></span>-->
+
+<h5>
+Position Modes = This is where the position property comes into play. There are five position values, but these are the four most important (the fifth being inherit).
+Static – This is the default property and positions itself according to where you’ve placed it in your HTML, ignoring your padding, margins, top and left properties etc.
+Absolute – The element will be positioned in relation to its first parent element that has a position set other than static.
+Fixed – The element will be positioned in relation to the browser window.
+Relative – The best way to describe this would be that the element behaves according to the typical left to right flow of the document. Like letters, words and text in a wordprocessor, relative elements will flow next to each other only breaking onto the next line when there is no more horizontal room in their parent element. This is the setting you want to make sure your divs sit next to each other
+</h5>
+
+
+<h1>Testing different position attributes:</h1>
+
+<div>1) Static Position is the default position which arrange items according to natural flow of the page: (top,left.. has no affect on static)</div></br>
+<div id="d1" class="divStyle">d1 (default=static)</div>
+<div id="d2" class="divStyle">d2 (default=static)</div>
+<div id="d3" class="divStyle">d3 (default=static)</div>
+<div id="d4" class="divStyle">d4 (default=static)</div>
+<div id="d5" class="divStyle">d5 (default=static)</div>
+</br>
+<div>2)An element with fixed position is positioned relative to the browser window. It will not move even if the window is scrolled.
+     Fixed positioned elements are removed from the normal flow. The document and other elements behave like the fixed positioned element does not exist.
+     Fixed positioned elements can overlap other elements.: (There are 3 divs in this example all have the same position fixed and top:336</div>
+</br>
+<div id="d11" class="divStyleFixed">d11 Fixed - there are 3 divs underneath</div>
+<div id="d21" class="divStyleFixed">d21 Fixed- there are 3 divs underneath</div>
+<div id="d31" class="divStyleFixed">d31 Fixed- there are 3 divs underneath</div>
+</br>
+<div>3)A relative positioned element is positioned relative to its normal position.
+    The content of relatively positioned elements can be moved and overlap other elements,
+    but the reserved space for the element is still preserved in the normal flow.
+    Relatively positioned elements are often used as container blocks for absolutely positioned elements.</div>
+</br>
+<div id="d12" class="divStyleRelative">d12 Relative </div>
+<div id="d22" class="divStyleRelative">d22 Relative</div>
+<div id="d32" class="divStyleRelative">d32 Relative</div>
+</br>
+
+</br>
+<div>4)An absolute position element is positioned relative to the first parent element that has a position other than static. If no such element is found, the containing block is <html>.
+Absolutely positioned elements are removed from the normal flow. The document and other elements behave like the absolutely positioned element does not exist.
+Absolutely positioned elements can overlap other elements.</div>
+</br>
+<div id="d13" class="divStyleAbsolute">d12 Absolute </div>
+<div id="d23" class="divStyleAbsolute">d22 Absolute</div>
+<div id="d33" class="divStyleAbsolute">d32 Absolute</div>
+</br>
+
+<H1>What are the display values used for :</H1>
+<h5>
+    *<b>Block</b> means that the element will not tolerate any elements sitting next to it and its height, width, padding, margins etc can be set. In following with our water analogy, we can think of the block mode as being like rough chunks of ice that don’t sit nicely next to each other.
+    *Inline means that an element will tolerate elements sitting next to it and elements like height and width can’t be set. Again, if this we water, inline would be its liquid form, easily flowing back and forth.
+    *Inline-block means the element will tolerate elements sitting next to it while adopting the other attributes of block mode, such as being able to set height and width. Finally, if this were water, think of it as smooth ice cubes that uniformly sit next to each other.
+</h3>
+
+</body>
+</html>

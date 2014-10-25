@@ -1,0 +1,51 @@
+
+div[id^='d1']{
+    background-color: red;
+}
+div[id^='d2']{
+    background-color: aqua;
+
+}
+div[id^='d3']{
+    background-color: blue ;
+}
+div[id^='d4']{
+    background-color: darkgreen;
+
+}
+#d5{
+
+}
+.divStyle{
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: navajowhite;
+    position: static;
+    top: 200px;
+    left: 300px;
+}
+.divStyleFixed{
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: navajowhite;
+    position: fixed;
+    top: 336px;
+}
+.divStyleRelative{
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: navajowhite;
+    position: relative;
+    left: 30px;
+}
+.divStyleAbsolute{
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: navajowhite;
+    position: absolute;
+    left: 10px;
+}
