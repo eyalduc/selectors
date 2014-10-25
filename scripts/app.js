@@ -3,11 +3,7 @@ var ns = ns ||{};
 require(['selectors'],function(selectorsAPI){
     selectorsAPI.execute();
 
-
-
     var container = $('container');
-    //container.appendChild('<input type=')
-
 
 var handleSelector = function(text){
     var relatedResult = "";
@@ -21,8 +17,17 @@ var handleSelector = function(text){
             //not so nice
             var liParent = checkboxes[i].parentElement.parentElement.parentElement;
             relatedResult = liParent.getAttribute('data-result');
-
+           // relatedResult = relatedResult.replace(\\)
             if(relatedResult === selector){//check if challenge is solved
+                var selectedItems = eval(selector);
+                for(var k=0; k<selectedItems.length; k++){
+                    $(selectedItems[k]).addClass("found");
+                    setTimeout(function () {
+                        $(this).removeClass("found");
+                    }.bind(selectedItems), (k+1)*1000);
+                }
+
+                alert(eval(selector).length);
                 checkboxes[i].disabled = true;
                 $(liParent).addClass('challengeCompleted');
                 $(checkboxes[i]).parent().parent().next().next().removeClass('hidden')
@@ -30,35 +35,13 @@ var handleSelector = function(text){
         }
     }
 
-
    if(!relatedResult){
        alert('you must select the desired checkbox for your answer');
    }
-
-
-  //  var selector = $('#userSelector').val();
-
-  //  console.log(eval(selector)); //Dangerous and slow - eval is not to be used !!!
-
-    //using a function
-    //var func = new Function(selector);
-    //console.log(func());
-
-
-    //var theInstructions = "alert('Hello World'); var x = 100";
-    //
-    //var F=new Function (theInstructions);
-    //
-    //return(F());
 }
-
-ns.handleSelector = handleSelector;
-
-
-
-
-
-
+    ns.handleSelector = handleSelector;
+    //the inner method do not being parsed to string so this is helpless for an object passing...TODO (anyhow it is not a nice idea and should be used for regular values)
+    //localStorage.setItem('ns', JSON.stringify(ns));
 
 
 

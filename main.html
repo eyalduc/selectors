@@ -15,25 +15,52 @@
 <ul id="todosUL" class="todosStyle">
     <li id="li1" class="todoItem" data-result="$('span')">
         <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
-        <span class="title">Find all spans (10)</span>
-        <span class="title answer hidden">$('span') --> 10</span>
+        <span class="title">Find all spans)</span>
+        <span class="title answer hidden">$('span')</span>
     </li>
     <li id="li2" class="todoItem" data-result="$('li span')">
         <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
-        <span class="title">Find all spans which are children of li (8\10)</span>
-        <span class="title answer hidden">$('li span') --> 10</span>
+        <span class="title">Find all spans which are children of li</span>
+        <span class="title answer hidden">$('li span')</span>
     </li>
     <li id="li3" class="todoItem" data-result="$('li > span')">
         <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
-        <span class="title">Find all spans which are direct children of li (4\10)</span>
-        <span class="title answer hidden">$('li > span') --> 10</span>
+        <span class="title">Find all spans which are direct children of li</span>
+        <span class="title answer hidden">$('li > span')</span>
     </li>
-    <li id="li4" class="todoItem" data-result="$('li:nth-child(1)')">
+    <li id="li4" class="todoItem" data-result="$('div + span')">
         <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
-        <span class="title">Find the first li child</span>
-        <span class="title answer hidden">$('li:nth-child(1) --> first challenge</span>
+        <span class="title">Find all spans which are the first sibling of a div element</span>
+        <span class="title answer hidden">$('div + span')</span>
+    </li>
+    <li id="li5" class="todoItem" data-result="$('li:first-child')">
+        <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
+        <span class="title">Find li element which is a first child (there are 2 correct answers, use the shorter one)</span>
+        <span class="title answer hidden">$('li:first-child</span>
+    </li>
+    <li id="li6" class="todoItem" data-result="$('li:nth-child(2)')">
+        <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
+        <span class="title">Find li element which is a second child</span>
+        <span class="title answer hidden">$('li:nth-child(2)</span>
+    </li>
+    <li id="li7" class="todoItem" data-result="$('li[id=\\'li2\\']')">
+        <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
+        <span class="title">Find the li element with id=li2</span>
+        <span class="title answer hidden">$('li[id="li2"]') -->  second item, issue with escaping the quote and single quote</span>
+    </li>
+    <li id="li8" class="todoItem" data-result="$('li[id$=\\'li2\\']')">
+        <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
+        <span class="title">Find the li elements which id's ends with 6</span>
+        <span class="title answer hidden">$('li[id$="6"]') -->  second item, issue with escaping the quote and single quote</span>
+    </li>
+    <li id="li9" class="todoItem" data-result="$('li[id]')">
+        <div style="display: inline"><span><input type="checkbox" class="checkbox"></span></div>
+        <span class="title">Find the li elements which has id</span>
+        <span class="title answer hidden">$('li[id]')</span>
     </li>
 </ul>
+  <a href="answer.html">Press to view answers</a>
+  <a href="http://wind.co.il/%D7%9E%D7%96%D7%92-%D7%90%D7%95%D7%99%D7%A8/%D7%A9%D7%99%D7%93%D7%95%D7%A8-%D7%97%D7%99/">Press to rest in the sea</a>
 
   <span><input type="text" id="userSelector" ></span>
   <span><button id="execute" class="executeSelector" onclick="ns.handleSelector()" >Execute</button></span>

@@ -15,3 +15,21 @@ li{
 .answer{
     float: right;
 }
+.found{
+    background-color: brown !important;
+}
+a{
+    display: block;
+}
+a:link{
+    color: burlywood;
+}
+a:visited{
+     color: chartreuse;
+ }
+a:hover{
+    color: aqua;
+}
+a:active{
+    color: black;
+}
